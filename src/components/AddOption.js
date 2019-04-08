@@ -2,8 +2,7 @@ import React from 'react'
 
 export default class AddOption extends React.Component {
   constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
+    super(props)
     this.state = {
       option: "",
       error: undefined
@@ -13,7 +12,7 @@ export default class AddOption extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.setState(() => ({ option: "" }));
     this.setState({ error: undefined });
